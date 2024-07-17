@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // operator
+
+        var num1 = 10;
+        var num2 = 5;
+        var result = 0;
+
+        // 복합 대입 연산자
+        num1 += num2;
+        num1 -= num2;
+        num1 *= num2;
+        num1 /= num2;
+        num1 %= num2;
+
+        // for
+        for(let i = 1; i <= 3; i++){
+            alert("for문" + i);
+        }
+
+        // 1~10합
+        var sum = 0;
+        for(let i = 1; i <= 10; i++){
+            sum = sum + i;
+            alert(sum);
+        }
+
+        // 구구단 2단
+        for(let i = 1; i <= 9; i++){
+            alert("2 * " + i + " = " + 2*i);
+        }
+
+        // 구구단 2~10단
+        for(let i = 2; i <= 9; i++){
+            for(let j = 1; j <= 9; j++){
+                alert(i + " * " + j + " = " + i*j);
+            }
+            alert("---------------");
+        }
+
+        // 구구단 2단 짝수만
+        for(let i = 1; i <= 9; i++){
+            if(i % 2 == 0){
+                alert("2 * " + i + " = " + 2*i)
+            } else { 
+                continue;
+            } 
+        }
+
+        // 구구단 2단 홀수만
+        for(let i = 1; i <= 9; i++){
+            if(i % 2 != 0){
+                alert("2 * " + i + " = " + 2*i)
+            } else { 
+                continue;
+            } 
+        }
+
+        // while
+        var i = 1;
+        while(i <= 3){
+            alert("안녕하세요" + i);
+            i++;
+        }
+
+        // do-while
+        var i = 1;
+        do{
+            alert("안녕하세요" + i);
+        } while(i <= 3)
+
+        // break
+        for(var i = 1; i <= 5; i++){
+            if(i == 5){
+                break;
+            }
+            console.log(i);
+        }
+
+        // continue-for
+        for(var i = 1; i <= 5; i++){
+            if(i % 2 == 0){
+                continue;
+            }
+            alert(i);
+        }
+
+        // continue-while
+        var i = 0;
+        var j = 0;
+        while(i <= 5){
+            i++;        // 1
+            alert(n);   // 0
+            if(i === 3){
+                continue;   // i가 3일때는 통과
+            }
+            n += i;
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

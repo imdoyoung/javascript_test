@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        for (let i = 1; i <= 3; i++) {    // let은 현재 블럭 안에서만 사용할 수 있다.
+            // alert("for반복문" + i);
+        }
+
+        // 1~10 합
+        // 필요조건
+        // 1. 결과변수를 만든다.
+        // 2. 값을 누적시킨다.
+        // 3. 결과변수를 출력한다.
+        var sum = 0;    // 결과값을 저장할 변수를 선언하고 0으로 초기화한다.
+        for (let i = 1; i <= 10; i++) {
+            // sum = sum + i;
+            sum += i;  // 결과변수에 값을 누적시킨다.
+            //alert(sum);     // 결과변수를 출력한다.
+        }
+
+        // 2단 (2 * 1 = 2)
+        // 방법1
+        var result1 = 0;
+        for (let i = 1; i <= 9; i++) {
+            result1 = 2 * i;
+            //alert("2 * " + i + " = " + result1);
+        }
+        // 방법2(중첩for문)
+        var result2 = 0;
+        for (let i = 2; i <= 2; i++) {
+            for (let j = 1; j <= 9; j++) {
+                result2 = i * j;
+                //alert(i + " * " + j + " = " + result2);
+            }
+        }
+        // 방법3(console.log();이용하여 출력하기)
+        for (let i = 1; i <= 9; i++) {
+            // console.log("2 * " + i + " = " + 2*i);
+        }
+        // console.log("-------------------");
+
+
+        // 2~9단
+        // console.log();를 이용하여 alert대신 콘솔창에 결과값 출력하기
+        for (let i = 2; i <= 9; i++) {
+            for (let j = 1; j <= 9; j++) {
+                // console.log(i + " * " + j + " = " +  i*j);
+            }
+            // console.log("-------------------");
+        }
+
+        // 2단 짝수만
+        for (let i = 1; i <= 9; i++) {
+            if (i % 2 == 0) {
+                console.log("2 * " + i + " = " + 2 * i);
+            } else {
+                continue;
+            }
+        }
+        console.log("-------------------");
+
+        // 2단 홀수만
+        for (let i = 1; i <= 9; i++) {
+            if (i % 2 != 0) {
+                console.log("2 * " + i + " = " + 2 * i);
+            } else {
+                continue;
+            }
+        }
+        console.log("-------------------");
+
+        // 별찍기1
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+        var star = "";                          // 초기화 안하면 오류남
+        for (let i = 1; i < 6; i++) {           // 행
+            for (let j = 1; j <= 1; j++) {      // * 찍히기
+                star += "*";                    // * 누적
+                console.log(star);
+            }
+        }
+        console.log("-------------------");
+
+        var star = "";                          // 초기화    
+        for (let i = 1; i < 6; i++) {           // 5줄
+            star += "*";                        // * 누적
+            console.log(star);                  // * 출력
+        }
+        console.log("-------------------");
+
+
+        // 별찍기2
+        //     *
+        //    ***
+        //   *****
+        //  *******
+        // *********
+
+        var star = "";                                  // 별 초기화
+        var empty = "";                                 // 공백 초기화
+        for (let i = 1; i < 6; i++) {                   // 5줄
+            for (let j = 1; j <= (2 * i) - 1; j++) {    // 2n-1(홀수;등비수열)이용하여 별 홀수개수로 출력
+                star += "*";                            // * 누적
+            }   
+            for (let k = (5 - i); k >= 1; k--) {        // 공백 4개씩 출력되고 밑에서 empty를 초기화해서 그 다음줄은 3개씩 출력됨
+                empty += " ";                           // 초기화된 empty에 공백 누적
+            }
+            console.log(empty + star);                  // 공백과 * 출력
+            var star = "";                              // 별 초기화
+            var empty = "";                             // 공백 초기화
+        }
+        console.log("-------------------");
+
+
+        // 별찍기3
+        //     *
+        //    **
+        //   ***
+        //  ****
+        // *****
+        
+        var star = "";                                  // 별 초기화
+        var empty = "";                                 // 공백 초기화
+        for(let i = 1; i < 6; i++){                     // 5줄 출력
+            for(let j = 1; j <= 1; j++){                // i가 반복되는 동안 반복
+                star += "*";                            // * 누적
+            }
+            for(let k = (5-i); k >= 1; k--){            // 공백 4개씩 출력되고 밑에서 empty를 초기화해서 그 다음줄은 3개씩 출력됨
+                empty += " ";                           // 초기화된 empty에 공백 누적
+            }
+            console.log(empty + star);                  // 공백과 * 출력
+            empty = "";                                 // 공백 초기화
+        }
+        console.log("-------------------");
+        
+
+    </script>
+</body>
+
+</html>

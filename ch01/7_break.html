@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // break
+        // if문을 탈출하는 것이 아닌 가장 가까운 for문이나 while문을 탈출함.
+        // 때문에 break는 항상 조건문과 같이 사용해야한다.
+        for (var i = 1; i <= 5; i++) {
+            if (i == 5) {
+                break;
+            }
+            console.log(i);
+        }
+
+        // continue : for
+        for(var i = 1; i <= 5; i++){
+            if(i % 2 == 0){     // i가 짝수면 continue
+                continue;       // for문의 break는 증감식으로 이동
+            }
+            alert(i);
+        }
+
+        // continue : while
+        var i = 0;
+        var n = 0;
+        while(i < 5){
+            i++;
+            alert(n);
+            if(i === 3){
+                continue;   // while문의 break는 조건식으로 이동
+            }
+            n += i;
+        }
+    </script>
+</body>
+
+</html>

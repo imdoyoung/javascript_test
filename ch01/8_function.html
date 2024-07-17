@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 변수 선언
+        var a;
+
+
+        // 함수 정의(= 변수 선언)
+        function abc() {
+            alert("asdf");
+        }
+
+        // 함수 사용
+        abc();
+
+        // 매개변수의 합을 구하는 함수 만들기
+        function abcd(num1, num2) {
+            alert(num1 + " : " + num2);
+        }
+
+        abcd(1, 2);
+
+        // 과제1: 매개변수 정수 두개 입력받고 합을 구하는 함수 만들기
+        function add(num1, num2) {
+            let sum = num1 + num2;
+            alert(sum);
+        }
+        function cal1(num1, num2) {
+            let result = num1 - num2;
+            alert(result);
+        }
+        function cal2(num1, num2) {
+            let result = num1 * num2;
+            alert(result);
+        }
+        function cal3(num1, num2) {
+            let result = num1 / num2;
+            alert(result);
+        }
+        function cal4(num1, num2) {
+            let result = num1 % num2;
+            alert(result);
+        }
+
+        add(9, 8);
+        cal1(9, 8);
+        cal2(9, 8);
+        cal3(9, 8);
+        cal4(9, 8);
+        
+        // return 사용하기
+        // return을 사용할 때는 항상 대입을 해야한다.
+        function add2(num1, num2) {
+            let result = num1 + num2;
+            return result;
+        }
+
+        var realResult = add2(30, 10);
+        alert(realResult);
+
+
+        // return 사용하여 사칙연산
+        function plus1 (num1, num2){
+            let result = num1 + num2;
+            return result;
+        }
+        var plus1Result = plus1(30, 10);
+        alert(plus1Result);
+
+        function minus1 (num1, num2){
+            let result = num1 - num2;
+            return result;
+        }
+        var minus1Result = minus1(30, 10);
+        alert(minus1Result);
+
+        function multiply1 (num1, num2){
+            let result = num1 * num2;
+            return result;
+        }
+        var multiply1Result = multiply1(30, 10);
+        alert(multiply1Result);
+
+        function divide1 (num1, num2){
+            let result = num1 / num2;
+            return result;
+        }
+        var divide1Result = divide1(30, 10);
+        alert(divide1Result);
+
+
+        // ????
+        function cla5 (num1, num2){
+            // let num1 = change(num1); // 오류 : 매개변수에 이미 num1이 선언되어있기 때문에 또 선언하려고 하면 오류 발생
+            num1 = change(num);        // num1의 값을 change(num)으로 업데이트
+            let result = num1 + num2;
+            return result;
+        }
+
+        function change (num){
+            return num -10;
+        }
+
+    </script>
+</body>
+
+</html>
